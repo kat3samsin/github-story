@@ -10,7 +10,7 @@ class App extends Component {
           </p>
           <a
             className="App-link"
-            href="https://reactjs.org"
+            href="https://github.com/kat3samsin/supersimple-react"
             target="_blank"
             rel="noopener noreferrer"
           >
