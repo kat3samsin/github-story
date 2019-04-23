@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-import { timeline } from '../css/timeline.js';
 
 export class UserStory extends Component {
-  componentDidMount() {
-    timeline();
-  }
 
   render() {
     return this.props && this.props.repo ? (

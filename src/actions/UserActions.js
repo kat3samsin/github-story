@@ -52,8 +52,8 @@ export const initialize = () => {
         return response.json();
       })
       .then(data => {
-        if (data.message === "Not Found") {
-          throw new Error("No such user found!!");
+        if (data.message === "Validation Failed") {
+          throw new Error("No such user found!!!");
         } else {
           dispatch(getUserSuccess({
             data: data.items
