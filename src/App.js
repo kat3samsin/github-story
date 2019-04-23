@@ -5,7 +5,6 @@ import Loader from 'react-loader';
 import UserInput from './components/UserInput';
 import UserStories from './components/UserStories';
 
-
 class App extends Component {
   render() {
     return (

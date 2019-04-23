@@ -17,6 +17,7 @@ export class UserStories extends Component {
       <div>
         <section className="intro">
         <div className="container">
+        {/* TODO: add user here! */}
           <h1>Story &darr;</h1>
         </div>
       </section>
