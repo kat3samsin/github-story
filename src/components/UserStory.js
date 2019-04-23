@@ -7,7 +7,7 @@ export class UserStory extends Component {
         <div>
           {/* add link to repo, stars, forks, load more */}
           <time>{this.props.repo.dateCreated}</time>
-          <a href={this.props.repo.url}>{this.props.repo.name}</a><br />
+          <title><a href={this.props.repo.url}>{this.props.repo.name}</a></title><br />
           {this.props.repo.description}<br />
           Language: {this.props.repo.language} <br />
           ⭐{this.props.repo.stars} <br />

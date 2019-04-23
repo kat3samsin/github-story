@@ -16,16 +16,16 @@ export class UserStories extends Component {
     return (
       <div>
         <section className="intro">
-        <div className="container">
-        {/* TODO: add user here! */}
-          <h1>Story &darr;</h1>
-        </div>
-      </section>
+          <div className="container">
+          {/* TODO: add user here! */}
+            <h1>Story &darr;</h1>
+          </div>
+        </section>
         <section className="timeline">
           <ul>
             {this.props.data.map((d) => <UserStory key={d.id} repo={d} />)}
           </ul>
-          </section>
+        </section>
       </div>
     );
   }
