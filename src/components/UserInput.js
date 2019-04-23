@@ -35,4 +35,8 @@ function mapDispatchToProps(dispatch) {
     }
   }
 }
-export default connect(null, mapDispatchToProps)(UserInput);
+
+const mapStateToProps = (state) => {
+  return state;
+}
+export default connect(mapStateToProps, mapDispatchToProps)(UserInput);

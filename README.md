@@ -1,7 +1,5 @@
 # github-story
-Your GitHub Story
-# github-story
-GitHub Repository Visualizer
+GitHub Repository Timeline
 
 # tech stack
 - react

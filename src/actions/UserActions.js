@@ -22,7 +22,7 @@ export const initialize = () => {
     username = user ? user.replace(/\s/g, "") : username;
     
     var apiData = {
-      url: `https://api.github.com/search/repositories?q=user:${username}&sort=updated&order=desc`
+      url: `https://api.github.com/users/${username}/repos?sort=created&direction=asc`
     };
     return dispatch => {
       dispatch(initialize());
@@ -56,7 +56,7 @@ export const initialize = () => {
           throw new Error("No such user found!!!");
         } else {
           dispatch(getUserSuccess({
-            data: data.items
+            data: data
           }));
         };
       })
