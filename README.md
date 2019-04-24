@@ -1,5 +1,6 @@
 # github-story
 A pretty awesome way to view your GitHub timeline.
+
 ![Alt Text](https://media.giphy.com/media/2dmYaHLkswwLHlfBP4/giphy.gif)
 
 # requirements
