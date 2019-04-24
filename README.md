@@ -1,5 +1,6 @@
 # github-story
 A pretty awesome way to view your GitHub timeline.
+(https://gfycat.com/SparseRawHyracotherium)
 
 # requirements
 app idea from [here](https://github.com/florinpop17/app-ideas/blob/master/Projects/GitHub-Timeline-App.md)
