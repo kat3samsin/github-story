@@ -53,5 +53,15 @@
 
 .navbar,
 .navbar-default {
-    background-image: linear-gradient(to bottom,#2c4053 0,#2c4053 100%) !important; /* override background image gradient w/ flat color */
+    background-color: #fdf9f3 !important; /* override background image gradient w/ flat color */
+    box-shadow: 4px 4px 0px #716e6c73;
+    border: 3px black solid;
+}
+
+.btn {
+  color: black;
+  border: 2px solid black;
+  box-shadow: 2px 2px 0 #716e6c73;
+  background-color: #66e2d5;
+  transition: none !important;
 }

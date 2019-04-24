@@ -20,13 +20,13 @@ export class SearchBar extends Component {
     this.setState({username: e.target.value});
   }
   render() {
-    return (<Navbar expand="lg" variant="dark" bg="dark" sticky="top">
-    <Navbar.Brand href="#home">GitHub Story</Navbar.Brand>
+    return (<Navbar sticky="top">
+    <Navbar.Brand href="https://github.com/kat3samsin/github-story">GitHub Story</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Form inline onSubmit={this.handleSubmit}>
-        <FormControl type="text" required type="text"  className="mr-sm-2" placeholder="Enter GitHub username" value={this.state.username} onChange={this.handleChange} />
-        <Button variant="outline-success">Search</Button>
+        <FormControl type="text" required type="text"  className="mr-sm-2" placeholder="Enter GitHub User" value={this.state.username} onChange={this.handleChange} />
+        <Button type="submit" variant="dark">Search</Button>
       </Form>
     </Navbar.Collapse>
   </Navbar>);

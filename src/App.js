@@ -11,12 +11,7 @@ class App extends Component {
     return (
       <div className='App'>
         <SearchBar /> <br />
-        {/* <a href='https://github.com'>
-          <img src='https://image.flaticon.com/icons/svg/25/25231.svg' alt='GitHub' width='100px' height='100px'/>
-        </a>
-        <h1>GitHub Story</h1>
-        <UserInput /><br /> */}
-        <Loader loaded={!this.props.isFetching} color="#0000" />
+        <Loader loaded={!this.props.isFetching} color="black" />
         {this.props.isError ? <h3>User not found.</h3> : null}
         {this.props.data && this.props.data.length > 0 ?
           <UserStories /> : null}
