@@ -11,12 +11,13 @@
 .userInput {
   border: 1.2px solid #141414 !important;
   background: #fff !important;
-  width: 50% !important;
+  width: 100% !important;
   height: 100% !important;
   font-size: 1.2rem !important;
   padding: 10px !important;
   outline: none !important;
   border-radius: 2px !important;
+  box-sizing: border-box;
 }
 
 ::placeholder {
@@ -30,10 +31,12 @@
   border-radius: 40px;
   text-align: center;
   margin-top: 20px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition: all 0.2s ease-in-out;
   outline: none;
-  width: 50%;
+  width: 100%;
+  text-transform: uppercase;
+  box-sizing: border-box;
 }
 
 .button:hover {
@@ -43,7 +46,12 @@
 
 .App {
   margin: auto;
-  width: 50%;
+  width: 100%;
   padding: 10px;
   text-align: center;
+}
+
+.navbar,
+.navbar-default {
+    background-image: linear-gradient(to bottom,#2c4053 0,#2c4053 100%) !important; /* override background image gradient w/ flat color */
 }

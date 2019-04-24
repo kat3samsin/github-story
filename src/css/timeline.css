@@ -17,11 +17,16 @@ body {
 
 .intro {
   background: #f2c7ac;
-  padding: 100px 0;
+  padding: 80px 0;
   border: 3px solid black;
   box-shadow: 4px 4px 0px #f2c7ac;
   position: relative;
-  bottom: 0;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  margin: auto;
+  width: 70%;
 }
 
 .container {
@@ -106,6 +111,7 @@ h1 {
 }
 
 time {
+  text-transform: uppercase;
   display: block;
   color: white;
   font-size: 1.2rem;
