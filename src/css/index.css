@@ -51,6 +51,7 @@
   text-align: center;
 }
 
+/* bootstrap customization */
 .navbar,
 .navbar-default {
     background-color: #fdf9f3 !important; /* override background image gradient w/ flat color */
