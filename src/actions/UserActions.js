@@ -52,7 +52,7 @@ export const initialize = () => {
         return response.json();
       })
       .then(data => {
-        if (data.message === "Validation Failed") {
+        if (data.message === "Not Found") {
           throw new Error("No such user found!!!");
         } else {
           dispatch(getUserSuccess({

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import Loader from 'react-loader';
 
-import UserInput from './components/UserInput';
 import UserStories from './components/UserStories';
 import SearchBar from './components/SearchBar';
 

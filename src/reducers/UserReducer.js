@@ -2,6 +2,7 @@ const initialState = {
   isError: false,
   isFetching: false,
   data: [],
+  user: {}
 };
   
 const UserReducer = (state = initialState, action) => {
@@ -12,12 +13,20 @@ const UserReducer = (state = initialState, action) => {
           isError: false,
           isFetching: true,
           data: [],
+          user: {}
+        });
+      case 'GET_USERSTORY_SUCCESS':
+        return Object.assign({}, state, {
+          isError: false,
+          isFetching: false,
+          data: processData(action.data)
         });
       case 'GET_USER_SUCCESS':
         return Object.assign({}, state, {
           isError: false,
           isFetching: false,
-          data: processData(action.data)
+          data: action.data,
+          user: processUser(action.user)
         });
       case 'GET_USER_ERROR':
         return Object.assign({}, state, {
@@ -44,4 +53,8 @@ const UserReducer = (state = initialState, action) => {
         language: d.language
       };
     });
+  }
+
+  export const processUser = function(user) {
+    return user;
   }
