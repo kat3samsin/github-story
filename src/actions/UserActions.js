@@ -35,7 +35,7 @@ export const initialize = () => {
             userInfo: JSON.parse(texts[1])
           };
           dispatch(getUserSuccess(result));
-        })
+        });
       });
     };
   };
@@ -62,7 +62,7 @@ export const initialize = () => {
         return response.json();
       })
       .then(data => {
-        if (data.message === "Validation Failed") {
+        if (data.message === "Not Found") {
           throw new Error("No such user found!!!");
         } else {
           // dispatch(getUserSuccess({
@@ -73,6 +73,6 @@ export const initialize = () => {
       })
       .catch(err => {
         console.log('callApi', err.toString());
-        reject();
+        dispatch(getUserError());
       });
   }

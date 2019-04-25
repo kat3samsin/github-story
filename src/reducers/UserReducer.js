@@ -6,19 +6,20 @@ const initialState = {
 };
   
 const UserReducer = (state = initialState, action) => {
-  console.log('action', action)
   switch(action.type) {
     case 'GET_USER':
         return Object.assign({}, state, {
           isError: false,
           isFetching: true,
           repos: [],
+          userInfo: {}
         });
       case 'GET_USER_SUCCESS':
         return Object.assign({}, state, {
           isError: false,
           isFetching: false,
-          repos: processRepos(action.repos)
+          repos: processRepos(action.repos),
+          userInfo: processUser(action.userInfo)
         });
       case 'GET_USER_ERROR':
         return Object.assign({}, state, {
@@ -46,4 +47,8 @@ const UserReducer = (state = initialState, action) => {
         language: repo.language
       };
     });
+  }
+
+  export const processUser = function(user) {
+    return user;
   }

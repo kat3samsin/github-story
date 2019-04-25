@@ -17,13 +17,17 @@ export class UserStories extends Component {
       <div>
         <section className="intro">
           <div className="container">
-          {/* TODO: add user here! */}
-            <h1>Story &darr;</h1>
+            <a href={this.props.userInfo.html_url}>
+              <img height='100px' width='100px' alt={this.props.userInfo.login} src={this.props.userInfo.avatar_url}/>
+            </a>
+            <h1>{this.props.userInfo.name} &darr;</h1>
+            {this.props.userInfo.bio}
+            <p>📍{this.props.userInfo.location}</p>
           </div>
         </section>
         <section className="timeline">
           <ul>
-            {this.props.repos.map((d) => <UserStory key={d.id} repo={d} />)}
+            {this.props.repos.map((repo) => <UserStory key={repo.id} repo={repo} />)}
           </ul>
         </section>
       </div>

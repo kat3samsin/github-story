@@ -1,13 +1,6 @@
-/* body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: #fbfafc;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} */
-
+body {
+  background: #fff7f3 !important;
+}
 .userInput {
   border: 1.2px solid #141414 !important;
   background: #fff !important;
@@ -51,6 +44,7 @@
   text-align: center;
 }
 
+/* bootstrap customization */
 .navbar,
 .navbar-default {
     background-color: #fdf9f3 !important; /* override background image gradient w/ flat color */
@@ -59,9 +53,8 @@
 }
 
 .btn {
-  color: black;
-  border: 2px solid black;
-  box-shadow: 2px 2px 0 #716e6c73;
-  background-color: #66e2d5;
-  transition: none !important;
+  color: black !important;
+  border: 2px solid black !important;
+  box-shadow: 2px 2px 0 #716e6c73 !important;
+  background-color: #66e2d5 !important;
 }

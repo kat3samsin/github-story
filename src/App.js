@@ -12,7 +12,7 @@ class App extends Component {
         <SearchBar /> <br />
         <Loader loaded={!this.props.isFetching} color="black" />
         {this.props.isError ? <h3>User not found.</h3> : null}
-        {this.props.data && this.props.data.length > 0 ?
+        {this.props.repos && this.props.repos.length > 0 ?
           <UserStories /> : null}
       </div>
     );
