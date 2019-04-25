@@ -4,10 +4,11 @@ export const initialize = () => {
     };
   };
   
-  export const getUserSuccess = data => {
+  export const getUserSuccess = result => {
     return {
       type: "GET_USER_SUCCESS",
-      data: data.data
+      repos: result.repos, 
+      userInfo: result.userInfo
     };
   };
   
@@ -21,12 +22,21 @@ export const initialize = () => {
   export const getUserStory = user => {
     username = user ? user.replace(/\s/g, "") : username;
     
-    var apiData = {
-      url: `https://api.github.com/users/${username}/repos?sort=created&direction=asc`
-    };
     return dispatch => {
       dispatch(initialize());
-      return callApi(dispatch, apiData);
+      const urls = [
+        `https://api.github.com/users/${username}/repos?sort=created&direction=asc`,
+        `https://api.github.com/users/${username}`
+      ]
+      Promise.all(urls.map(url => fetch(url))).then(responses => {
+        Promise.all(responses.map(res => res.text())).then(texts => {
+          let result = {
+            repos: JSON.parse(texts[0]),
+            userInfo: JSON.parse(texts[1])
+          };
+          dispatch(getUserSuccess(result));
+        })
+      });
     };
   };
 
@@ -46,7 +56,7 @@ export const initialize = () => {
     }
   }
   
-  export const callApi = (dispatch, apiData) => {
+  export const callApi = (resolve, reject, apiData) => {
     return fetch(apiData.url)
       .then(response => {
         return response.json();
@@ -55,13 +65,14 @@ export const initialize = () => {
         if (data.message === "Validation Failed") {
           throw new Error("No such user found!!!");
         } else {
-          dispatch(getUserSuccess({
-            data: data
-          }));
+          // dispatch(getUserSuccess({
+          //   data: data
+          // }));
+          resolve(data.data)
         };
       })
       .catch(err => {
         console.log('callApi', err.toString());
-        dispatch(getUserError())
+        reject();
       });
   }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
 import { getUserStory } from "../actions/UserActions";
-import { Navbar, Nav, NavDropdown, Form, Button, FormControl } from 'react-bootstrap';
+import { Navbar, Form, Button, FormControl } from 'react-bootstrap';
 
 export class SearchBar extends Component {
   constructor(props) {
@@ -25,7 +25,7 @@ export class SearchBar extends Component {
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Form inline onSubmit={this.handleSubmit}>
-        <FormControl type="text" required type="text"  className="mr-sm-2" placeholder="Enter GitHub User" value={this.state.username} onChange={this.handleChange} />
+        <FormControl type="text" required className="mr-sm-2" placeholder="Enter GitHub User" value={this.state.username} onChange={this.handleChange} />
         <Button type="submit" variant="dark">Search</Button>
       </Form>
     </Navbar.Collapse>

@@ -23,7 +23,7 @@ export class UserStories extends Component {
         </section>
         <section className="timeline">
           <ul>
-            {this.props.data.map((d) => <UserStory key={d.id} repo={d} />)}
+            {this.props.repos.map((d) => <UserStory key={d.id} repo={d} />)}
           </ul>
         </section>
       </div>
