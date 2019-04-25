@@ -18,7 +18,7 @@ export class UserStories extends Component {
         <section className="intro">
           <div className="container">
             <a href={this.props.userInfo.html_url}>
-              <img height='100px' width='100px' alt={this.props.userInfo.login} src={this.props.userInfo.avatar_url}/>
+              <img height='50px' width='50px' alt={this.props.userInfo.login} src={this.props.userInfo.avatar_url}/>
             </a>
             <h1>{this.props.userInfo.name} &darr;</h1>
             {this.props.userInfo.bio}
